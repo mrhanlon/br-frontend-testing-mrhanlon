@@ -1,14 +1,14 @@
 /**********************************
- * Magic School Bus reminder 
+ * Magic School Bus reminder
  * Classifications:
- *  scalene: all three sides are different  
+ *  scalene: all three sides are different
  *  isosceles: two of its sides are equal
  *  equilateral:  all three sides are equal
- * 
+ *
  * A Valid Triangle exists when:
  *  a + b > c
  *  a + c > b
- *  b + c > a 
+ *  b + c > a
  **********************************/
 
 
@@ -21,5 +21,9 @@ describe('TriangleClassifier', function() {
     var result = new TriangleClassifier().classify(4,3,2);
     expect(result).toEqual('scalene');
   });
-});
 
+  it('classifies as scalene 5,5,5', function() {
+    var result = new TriangleClassifier().classify(5,5,5);
+    expect(result).toEqual('equilateral');
+  });
+});
